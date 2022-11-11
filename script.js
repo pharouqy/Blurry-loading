@@ -1,8 +1,6 @@
 const bg = document.querySelector(".background");
 const compteur = document.querySelector(".compteur > span");
 
-console.log(compteur);
-
 let i = 100;
 function timerBlur() {
   i--;
@@ -14,4 +12,9 @@ function timerBlur() {
     clearInterval(interv);
   }
 }
-let interv = setInterval(timerBlur, 50);
+
+bg.addEventListener("mouseover", (e) => {
+  e.preventDefault;
+  e.stopPropagation();
+  var interv = setInterval(timerBlur, 150);
+});
